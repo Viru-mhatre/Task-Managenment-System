@@ -1,0 +1,252 @@
+// .card-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 2rem;
+//   padding: 2rem;
+// }
+
+// .task-list {
+//   display: flex;
+//   justify-content: flex-start;
+// }
+
+// .task-card {
+//   width: 600px;
+//   padding: 1.5rem;
+//   border-radius: 16px;
+//   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+//   background-color: #ffffff;
+//   transition: transform 0.3s ease;
+
+//   &:hover {
+//     transform: translateY(-5px);
+//   }
+
+//   .task-details {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+
+//     .task-name {
+//       font-size: 1.8rem;
+//       font-weight: 600;
+//       color: rgb(40, 40, 245);
+//       margin: 0;
+//     }
+
+//     .task-description {
+//       font-size: 1rem;
+//       color: black;
+//       margin-bottom: 1rem;
+//     }
+
+//     mat-divider {
+//       margin: 1rem 0;
+//       background-color: #e0e0e0;
+//     }
+
+//     .task-info {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 0.75rem;
+
+//       .info-row {
+//         display: flex;
+//         justify-content: space-between;
+//         font-size: 1rem;
+//         color: #34495e;
+
+//         .info-label {
+//           font-weight: 400;
+//         }
+
+//         .info-value {
+//           font-weight: 600;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .comment-card {
+//   width: 600px;
+//   padding: 1.5rem;
+//   border-radius: 16px;
+//   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+//   background-color: #f9f9f9;
+
+//   mat-card-content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+
+//     h4 {
+//       font-size: 1.2rem;
+//       color: #2c3e50;
+//       margin: 0;
+//     }
+
+//     form {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 1rem;
+
+//       mat-form-field {
+//         width: 100%;
+//       }
+
+//       textarea {
+//         min-height: 100px;
+//       }
+
+//       button {
+//         align-self: flex-end;
+//       }
+//     }
+//   }
+// }
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // left-align all children
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0; // remove auto-centering
+}
+
+.task-list,
+.comment-card,
+.comment-list {
+  width: 100%;
+}
+
+.task-card,
+.comment-card,
+.comment-list mat-card {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.task-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(40, 40, 245);
+  margin: 0;
+}
+
+.task-description {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+mat-divider {
+  margin: 1rem 0;
+  background-color: #e0e0e0;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #34495e;
+
+    .info-label {
+      font-weight: 400;
+    }
+
+    .info-value {
+      font-weight: 600;
+    }
+  }
+}
+
+.comment-card mat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h4 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      align-self: flex-end;
+    }
+  }
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; // left-align comments
+}
+
+.comment-list h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+  color: #2c3e50;
+}
+
+.comment-list mat-card {
+  margin-top: 10px;
+}
+
+mat-card-header {
+  align-items: center;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+mat-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+mat-card-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+mat-card-content {
+  font-size: 1rem;
+  color: #444;
+  padding: 0.5rem 1rem;
+}

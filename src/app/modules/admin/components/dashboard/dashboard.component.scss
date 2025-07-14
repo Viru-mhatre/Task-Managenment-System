@@ -1,0 +1,143 @@
+
+
+.search-form {
+  display: flex;
+  justify-content: center;
+ 
+  margin: 2px 2px;
+  width: 100%;
+
+  .search-input {
+    width: 250px;
+    max-width: 400px;
+
+    input {
+      padding-right: 20px;
+    }
+  }
+}
+
+
+// 📌 Updated to Grid Layout
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+  justify-content: flex-start; // align cards to left
+}
+
+// 📌 Responsive Card Width
+.task-card {
+  flex: 0 0 calc(33.33% - 1rem);
+  max-width: calc(33.33% - 1rem);
+  min-width: 280px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3f51b5; // Blue title
+}
+
+.task-description {
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+// 📌 Replaced grid layout with flex for better control
+.task-info {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.info-value {
+  font-weight: bold;
+  color: #000;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1rem;
+
+  button, a {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  mat-icon {
+    font-size: 22px;
+  }
+
+  .delete-button {
+    background-color: #ffeaea;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #ffc6c6;
+    }
+
+    mat-icon {
+      color: #e53935;
+    }
+  }
+
+  .view-button mat-icon {
+    color: #1e88e5;
+    
+  }
+
+  .update-button mat-icon {
+    color: #43a047;
+  }
+}
+
+// ✅ Responsive Breakpoints
+@media (max-width: 1024px) {
+  .task-card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .task-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+<!-- app.component.html -->
+<div class="app-background">
+
+  <!-- ✅ Guest Navbar -->
+  <ng-container *ngIf="!isEmployeeLoggedIn && !isAdminLoggedIn">
+    <mat-toolbar class="navbar" color="primary">
+      <span class="navbar-brand">Task Management System</span>
+      <span class="spacer"></span>
+      <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
+      <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+    </mat-toolbar>
+  </ng-container>
+
+  <!-- ✅ Admin Navbar -->
+  <ng-container *ngIf="isAdminLoggedIn">
+    <mat-toolbar class="navbar" color="primary">
+      <span class="navbar-brand">Admin</span>
+      <span class="spacer"></span>
+      <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
+      <button mat-button routerLink="/admin/task" routerLinkActive="active">Post Task</button>
+      <button mat-button (click)="logout()">Logout</button>
+    </mat-toolbar>
+  </ng-container>
+
+  <!-- ✅ Employee Navbar -->
+  <ng-container *ngIf="isEmployeeLoggedIn">
+    <mat-toolbar class="navbar" color="primary">
+      <span class="navbar-brand">Employee</span>
+      <span class="spacer"></span>
+      <button mat-button routerLink="/employee/dashboard" routerLinkActive="active">Dashboard</button>
+      <button mat-button (click)="logout()">Logout</button>
+    </mat-toolbar>
+  </ng-container>
+
+  <!-- ✅ Routed Content Area (scrollable) -->
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

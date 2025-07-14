@@ -1,0 +1,173 @@
+// .task-list {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+//   gap: 1.5rem;
+//   padding: 2rem;
+// }
+
+// .task-card {
+//   padding: 1.5rem;
+//   border-radius: 1rem;
+//   background-color: #ffffff;
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+//   transition: transform 0.2s ease-in-out;
+//   position: relative;
+
+//   &:hover {
+//     transform: scale(1.02);
+//   }
+
+//   .task-details {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+
+//     .task-name {
+//       font-size: 1.5rem;
+//       font-weight: 600;
+//       color: #2c2ea3;
+//       margin: 0;
+//     }
+
+//     .task-description {
+//       font-size: 1rem;
+//       color: #2d3436;
+//     }
+
+//     .task-info {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 0.75rem;
+
+//       .info-row {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+
+//         .info-label {
+//           font-weight: 500;
+//           color: #636e72;
+//         }
+
+//         .info-value {
+//           font-weight: 600;
+//           color: #2d3436;
+//         }
+//       }
+//     }
+
+//     .actions {
+//       display: flex;
+//       justify-content: flex-end;
+//       margin-top: 1rem;
+
+//       .update-button {
+//         background-color: #f0f0f0;
+//         border-radius: 50%;
+//         transition: background-color 0.2s ease;
+
+//         &:hover {
+//           background-color: #e0e0e0;
+//         }
+
+//         mat-icon {
+//           color: #1976d2;
+//         }
+//       }
+//     }
+
+//     mat-divider {
+//       margin: 1rem 0;
+//       background-color: #dfe6e9;
+//     }
+//   }
+// }
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; // reduce spacing between cards
+  padding: 1rem;
+  justify-content: flex-start; // align cards to left without extra space
+}
+
+.task-card {
+  flex: 0 0 calc(33.33% - 1rem); // 3 cards per row with spacing
+  max-width: calc(33.33% - 1rem);
+  min-width: 280px;
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .task-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+  }
+
+  .task-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  .task-info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+
+      .info-label {
+        font-weight: 600;
+        color: #333;
+      }
+
+      .info-value {
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+
+  .actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+
+    button, a {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    mat-icon {
+      font-size: 22px;
+    }
+
+    
+    .view-button mat-icon {
+      color: #1e88e5;
+    }
+
+    .update-button mat-icon {
+      color: #43a047;
+    }
+  }
+}

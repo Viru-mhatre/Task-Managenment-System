@@ -1,0 +1,48 @@
+/* Center the form container */
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* Style the card */
+mat-card {
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the card title */
+mat-card-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #3f51b5;
+}
+
+/* Each form field takes full width with spacing */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Style for the error message */
+mat-error {
+  font-size: 12px;
+  color: #f44336;
+}
+
+/* Style the login button */
+button[type="submit"] {
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Style for bottom action link */
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
